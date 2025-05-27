@@ -1,239 +1,278 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- Reemplaza TODO el contenido de este archivo por el siguiente: -->
 
-<style>
-  :host {
-    --bright-blue: oklch(51.01% 0.274 263.83);
-    --electric-violet: oklch(53.18% 0.28 296.97);
-    --french-violet: oklch(47.66% 0.246 305.88);
-    --vivid-pink: oklch(69.02% 0.277 332.77);
-    --hot-red: oklch(61.42% 0.238 15.34);
-    --orange-red: oklch(63.32% 0.24 31.68);
-
-    --gray-900: oklch(19.37% 0.006 300.98);
-    --gray-700: oklch(36.98% 0.014 302.71);
-    --gray-400: oklch(70.9% 0.015 304.04);
-
-    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
-      180deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
-      90deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-    --pill-accent: var(--bright-blue);
-
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  h1 {
-    font-size: 3.125rem;
-    color: var(--gray-900);
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: -0.125rem;
-    margin: 0;
-    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-  }
-
-  p {
-    margin: 0;
-    color: var(--gray-700);
-  }
-
-  main {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    box-sizing: inherit;
-    position: relative;
-  }
-
-  .angular-logo {
-    max-width: 9.2rem;
-  }
-
-  .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 3rem;
-  }
-
-  .content h1 {
-    margin-top: 1.75rem;
-  }
-
-  .content p {
-    margin-top: 1.5rem;
-  }
-
-  .divider {
-    width: 1px;
-    background: var(--red-to-pink-to-purple-vertical-gradient);
-    margin-inline: 0.5rem;
-  }
-
-  .pill-group {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-  }
-
-  .pill {
-    display: flex;
-    align-items: center;
-    --pill-accent: var(--bright-blue);
-    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
-    color: var(--pill-accent);
-    padding-inline: 0.75rem;
-    padding-block: 0.375rem;
-    border-radius: 2.75rem;
-    border: 0;
-    transition: background 0.3s ease;
-    font-family: var(--inter-font);
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.4rem;
-    letter-spacing: -0.00875rem;
-    text-decoration: none;
-  }
-
-  .pill:hover {
-    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
-  }
-
-  .pill-group .pill:nth-child(6n + 1) {
-    --pill-accent: var(--bright-blue);
-  }
-  .pill-group .pill:nth-child(6n + 2) {
-    --pill-accent: var(--french-violet);
-  }
-  .pill-group .pill:nth-child(6n + 3),
-  .pill-group .pill:nth-child(6n + 4),
-  .pill-group .pill:nth-child(6n + 5) {
-    --pill-accent: var(--hot-red);
-  }
-
-  .pill-group svg {
-    margin-inline-start: 0.25rem;
-  }
-
-  .social-links {
-    display: flex;
-    align-items: center;
-    gap: 0.73rem;
-    margin-top: 1.5rem;
-  }
-
-  .social-links path {
-    transition: fill 0.3s ease;
-    fill: var(--gray-400);
-  }
-
-  .social-links a:hover svg path {
-    fill: var(--gray-900);
-  }
-
-  @media screen and (max-width: 650px) {
-    .content {
-      flex-direction: column;
-      width: max-content;
-    }
-
-    .divider {
-      height: 1px;
-      width: 100%;
-      background: var(--red-to-pink-to-purple-horizontal-gradient);
-      margin-block: 1.5rem;
-    }
-  }
-
-  .hero {
-    text-align: center;
-    padding: 2rem;
-    background: var(--red-to-pink-to-purple-vertical-gradient);
-    color: white;
-    border-radius: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .card {
-    background: white;
-    color: black;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .btn-primary {
-    background: var(--bright-blue);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 0.375rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-
-  .btn-primary:hover {
-    background: var(--electric-violet);
-  }
-</style>
-
-<main class="main">
-  <section class="hero">
-    <h2>¡Hola, Angular!</h2>
-    <p>Esta es mi plantilla personalizada</p>
-    
-    <div class="card">
-      <h3>Características</h3>
-      <ul>
-        <li>Diseño moderno</li>
-        <li>Modo oscuro/claro</li>
-        <li>Responsivo</li>
-      </ul>
-      
-      <button class="btn-primary" (click)="toggleTheme()">
-        {{ isDarkTheme ? 'Modo Claro' : 'Modo Oscuro' }}
+<ng-container>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#page-top">{{ title }}</a>
+      <button 
+        class="navbar-toggler navbar-toggler-right" 
+        type="button" 
+        (click)="toggleNavbar()"
+        [attr.aria-expanded]="isNavbarOpen"
+        aria-controls="navbarResponsive" 
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
       </button>
+      <div class="collapse navbar-collapse" [class.show]="isNavbarOpen" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home" (click)="setActiveSection('home')">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" (click)="setActiveSection('about')">Acerca de</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects" (click)="setActiveSection('projects')">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" (click)="setActiveSection('contact')">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-light btn-sm ms-2" (click)="toggleTheme()">
+              <i [class]="isDarkTheme ? 'fas fa-sun' : 'fas fa-moon'"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-  </section>
-</main>
+  </nav>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <!-- Page Header -->
+  <header class="masthead" [style.background-image]="'url(' + backgroundImage + ')'">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>{{ heroTitle }}</h1>
+            <hr class="small">
+            <span class="subheading">{{ heroSubtitle }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+        <!-- Home Section -->
+        <section id="home" *ngIf="activeSection === 'home'" class="content-section">
+          <div class="post-preview">
+            <h2 class="post-title">Bienvenido a Mi Proyecto Personalizado</h2>
+            <h3 class="post-subtitle">Una aplicación Angular moderna con diseño limpio y elegante</h3>
+            <p class="post-meta">
+              Creado el {{ currentDate | date:'dd/MM/yyyy' }}
+            </p>
+          </div>
+          
+          <hr>
+          
+          <div class="feature-cards">
+            <div class="card mb-4" *ngFor="let feature of features">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i [class]="feature.icon"></i>
+                  {{ feature.title }}
+                </h5>
+                <p class="card-text">{{ feature.description }}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" *ngIf="activeSection === 'about'" class="content-section">
+          <h2>Acerca del Proyecto</h2>
+          <p class="lead">
+            Este proyecto combina la potencia de Angular con el diseño elegante de Clean Blog, 
+            creando una experiencia de usuario moderna y atractiva.
+          </p>
+          
+          <h3>Tecnologías Utilizadas</h3>
+          <ul class="tech-list">
+            <li><strong>Angular 19:</strong> Framework principal para el desarrollo</li>
+            <li><strong>SCSS:</strong> Para estilos avanzados y mantenibles</li>
+            <li><strong>Bootstrap:</strong> Sistema de rejilla y componentes responsivos</li>
+            <li><strong>TypeScript:</strong> Tipado estático para mejor desarrollo</li>
+          </ul>
+
+          <h3>Características</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <ul>
+                <li>Diseño responsivo</li>
+                <li>Modo oscuro/claro</li>
+                <li>Navegación fluida</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li>Rendimiento optimizado</li>
+                <li>SEO friendly</li>
+                <li>Fácil mantenimiento</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" *ngIf="activeSection === 'projects'" class="content-section">
+          <h2>Mis Proyectos</h2>
+          
+          <div class="project-item" *ngFor="let project of projects">
+            <div class="post-preview">
+              <h3 class="post-title">{{ project.title }}</h3>
+              <h4 class="post-subtitle">{{ project.description }}</h4>
+              <p class="post-meta">
+                Tecnologías: {{ project.technologies.join(', ') }}
+              </p>
+              <div class="project-links mt-2">
+                <a [href]="project.demoUrl" class="btn btn-primary btn-sm" target="_blank" *ngIf="project.demoUrl">
+                  <i class="fas fa-external-link-alt"></i> Ver Demo
+                </a>
+                <a [href]="project.githubUrl" class="btn btn-outline-secondary btn-sm ms-2" target="_blank" *ngIf="project.githubUrl">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" *ngIf="activeSection === 'contact'" class="content-section">
+          <h2>Contacto</h2>
+          <p>¿Tienes preguntas? ¡Me encantaría escuchar de ti!</p>
+          
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Nombre</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  placeholder="Nombre" 
+                  formControlName="name"
+                  [class.is-invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                <div class="invalid-feedback" *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                  Por favor ingresa tu nombre.
+                </div>
+              </div>
+            </div>
+            
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Email</label>
+                <input 
+                  type="email" 
+                  class="form-control" 
+                  placeholder="Email" 
+                  formControlName="email"
+                  [class.is-invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                <div class="invalid-feedback" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                  Por favor ingresa un email válido.
+                </div>
+              </div>
+            </div>
+            
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Teléfono (Opcional)</label>
+                <input 
+                  type="tel" 
+                  class="form-control" 
+                  placeholder="Teléfono" 
+                  formControlName="phone">
+              </div>
+            </div>
+            
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Mensaje</label>
+                <textarea 
+                  rows="5" 
+                  class="form-control" 
+                  placeholder="Mensaje" 
+                  formControlName="message"
+                  [class.is-invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+                </textarea>
+                <div class="invalid-feedback" *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+                  Por favor ingresa tu mensaje.
+                </div>
+              </div>
+            </div>
+            
+            <br>
+            
+            <div id="success" class="alert alert-success" *ngIf="formSubmitted && contactForm.valid">
+              <strong>¡Mensaje enviado!</strong> Gracias por contactarme.
+            </div>
+            
+            <div class="form-group">
+              <button 
+                type="submit" 
+                class="btn btn-primary" 
+                [disabled]="contactForm.invalid || isSubmitting">
+                <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm me-2"></span>
+                {{ isSubmitting ? 'Enviando...' : 'Enviar Mensaje' }}
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Pager (if needed for blog posts) -->
+        <div class="clearfix" *ngIf="activeSection === 'home'">
+          <a class="btn btn-primary float-right" href="#projects" (click)="setActiveSection('projects')">
+            Ver Proyectos &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="#" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; {{ title }} {{ currentYear }}</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</ng-container>
 
 
